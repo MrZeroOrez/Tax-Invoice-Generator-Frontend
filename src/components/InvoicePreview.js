@@ -62,7 +62,7 @@ export default function InvoicePreview({ data }) {
       </head><body>${document.getElementById("preview-area").innerHTML}</body></html>`;
 
       const response = await axios.post(
-        "https://taxinvoicegenerator-backend.onrender.com",
+        "https://taxinvoicegenerator-backend.onrender.com/api/invoice/generate",
         { html },
         { responseType: "blob" }
       );
